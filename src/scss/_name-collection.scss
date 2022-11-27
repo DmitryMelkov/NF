@@ -1,0 +1,415 @@
+@import "_variables";
+@import "_mixins";
+
+.name-collection {
+  &__top {
+    background-image: url("../img/name-collection-bg.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__top-container {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+  &__left {
+    grid-column: span 2;
+    min-width: 188px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__left-img-container {
+    margin-bottom: 16px;
+  }
+  &__left-span-content-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__left-span-content-2 {
+    display: none;
+  }
+  &__left-span {
+    @include text(20px, 26px, 800, $colorWhite);
+  }
+  &__left-span:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__center {
+    grid-column: span 7;
+    max-width: 784px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__center-descr-content-2 {
+    display: none;
+  }
+  &__center-raiting {
+    max-width: 166px;
+  }
+  &__center-title {
+    @include text(38px, 49px, 800, $colorWhite);
+  }
+  &__center-descr {
+    @include text(16px, 26px, 600, $colorWhite);
+    margin-bottom: 21px;
+  }
+  &__center-btn {
+    padding: 17px 20px;
+    max-width: 184px;
+    @include text(16px, 21px, 800, $colorWhite);
+
+    border: 2px solid $colorWhite;
+    border-radius: 12px;
+    transition-property: color, background-color;
+    @include transition;
+  }
+  &__right {
+    grid-column: span 3;
+
+    min-width: 423px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__right-spans {
+    margin-bottom: 5px;
+    padding: 12px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $colorWhite;
+    box-shadow: 0px 12.5216px 10.0172px rgba(73, 48, 115, 0.035), 0px 6.6501px 5.32008px rgba(73, 48, 115, 0.0282725),
+      0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 10px;
+  }
+  &__right-span {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    @include text(16px, 20px, 600, $colorBlackDark);
+  }
+  &__right-span:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: 0;
+    z-index: 1;
+    width: 1px;
+    height: 27px;
+    background-color: $colorGreyBtn;
+  }
+  &__right-inputs {
+    position: relative;
+  }
+  &__right-btns {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    z-index: 11;
+  }
+
+  &__right-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 10px;
+    transition-property: background-color;
+    @include transition;
+  }
+  &__right-btn-svg {
+    @include svg-icon(26px, 26px, $colorBlack);
+    transition-property: color;
+    @include transition;
+  }
+  &__right-social {
+    width: 100%;
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__right-btn-social-svg {
+    @include svg-icon(56px, 56px, $colorIcons);
+    transition-property: color;
+    @include transition;
+  }
+  &__right-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 3fr);
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  &__right-grid-item {
+    grid-column: span 3;
+  }
+  &__right-grid-item:nth-child(1) {
+    grid-column: span 6;
+  }
+  &__right-grid-item:nth-child(2) {
+    grid-column: span 6;
+  }
+
+  &__grid-content {
+    display: flex;
+  }
+  &__grid-title {
+    margin-right: 5px;
+    @include text(13px, 17px, 700, $colorBlack);
+  }
+  &__grid-title-bottom {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  &__grid-title-svg {
+    width: 14px;
+    height: 14px;
+  }
+  &__grid-span {
+    @include text(34px, 43px, 800, $colorPurple);
+  }
+  &__swiper {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  &__swiper-wrapper {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    align-items: center;
+  }
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    height: 100%;
+  }
+  &__slide-content {
+    padding: 16px 10px 16px 27px;
+  }
+  &__swiper-img {
+    // width: 100%;
+    height: 100%;
+  }
+  &__slide-title {
+    margin-bottom: 10px;
+    @include text(18px, 24px, 800, $colorBlack);
+  }
+  &__slide-descr {
+    max-width: 229px;
+    @include text(14px, 20px, 600, $colorBlack);
+  }
+  &__swiper-svg {
+    @include svg-icon(16px, 33px, $colorIcons);
+  }
+}
+
+.name-collection__swiper .name-collection__swiper-pagination {
+  bottom: 40px;
+}
+
+.name-collection__swiper .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: $colorPurple;
+}
+
+//hover
+@media (min-width: 1024px) {
+  .name-collection {
+    &__center-btn:hover {
+      background-color: $colorWhite;
+      color: $colorPurple;
+    }
+    &__right-btn-svg:hover {
+      color: $colorPurple;
+    }
+    &__right-input:hover {
+      background-color: $colorGreyLight;
+    }
+    &__right-btn-social-svg-1:hover {
+      color: $colorBlackDark;
+    }
+    &__right-btn-social-svg-2:hover {
+      color: $colorBlue;
+    }
+    &__right-btn-social-svg-3:hover {
+      color: $colorDiscord;
+    }
+    &__right-btn-social-svg-4:hover {
+      color: $colorBlue;
+    }
+    &__right-btn-social-svg-5:hover {
+      color: $colorGreyBtn;
+    }
+  }
+}
+
+//active, focus
+.name-collection {
+  &__center-btn:active {
+    background-color: $colorWhite;
+    color: $colorPurple;
+  }
+  &__center-btn:focus-visible {
+    background-color: $colorWhite;
+    color: $colorPurple;
+  }
+  &__right-btn-social-svg:active {
+    color: $colorPurple;
+  }
+  &__right-btn-svg:active {
+    color: $colorPurple;
+  }
+  &__right-btn:focus-visible &__right-btn-svg {
+    color: $colorPurple;
+  }
+  &__right-btn:focus-visible {
+    outline: none;
+  }
+  &__right-input:active {
+    background-color: $colorGreyLight;
+  }
+  &__right-input:focus-visible {
+    background-color: $colorGreyLight;
+    outline: none;
+  }
+  &__right-btn-social:focus-visible {
+    outline: none;
+  }
+  &__right-btn-social:focus-visible &__right-btn-social-svg {
+    color: $colorPurple;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .name-collection {
+    &__left {
+      grid-column: span 3;
+    }
+    &__center {
+      grid-column: span 9;
+    }
+
+    &__right {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 6fr);
+      grid-column: span 12;
+
+      gap: 30px;
+    }
+    &__right-top {
+      grid-column: span 6;
+    }
+    &__right-grid {
+      grid-column: span 6;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .name-collection {
+    &__swiper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__swiper-next, &__swiper-prev {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .name-collection {
+    &__top-container {
+      position: relative;
+    }
+    &__center-descr-content-1,
+    &__left-span-content-1 {
+      display: none;
+    }
+    &__left-span-content-2 {
+      // display: flex;
+      flex-direction: column;
+    }
+    &__center-descr-content-2 {
+      display: block;
+      grid-column: span 12;
+    }
+    &__right-top {
+      grid-column: span 12;
+    }
+    &__right-grid {
+      grid-column: span 12;
+    }
+    &__right,
+    &__left {
+      min-width: fit-content;
+    }
+    &__left,
+    &__center {
+      grid-column: span 6;
+    }
+    &__center-title {
+      @include text(18px, 23px, 800, $colorWhite);
+    }
+    &__slide {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .name-collection {
+    &__top-container {
+      padding: 20px;
+    }
+    &__left {
+      grid-column: span 4;
+    }
+    &__center {
+      grid-column: span 8;
+    }
+    &__right-btn-social-svg {
+      width: 43px;
+      height: 43px;
+    }
+    &__slide-content {
+      padding-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .name-collection {
+    &__top-container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+    }
+    &__center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__center-descr-content-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__center-descr {
+      text-align: center;
+    }
+  }
+}

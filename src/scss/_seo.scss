@@ -1,0 +1,56 @@
+@import "_variables";
+
+.seo {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-image: url("../img/seo-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
+    width: 45%;
+    margin-right: 30px;
+  }
+  &__right {
+    width: 52%;
+  }
+  &__header {
+    margin-bottom: 12px;
+  }
+  &__descr {
+    max-width: 559px;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .seo {
+    &__container {
+      flex-direction: column;
+    }
+    &__left {
+      margin-bottom: 50px;
+    }
+    &__left,
+    &__right {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .seo {
+    &__header, &__descr, &__span {
+      max-width: none;
+      text-align: center;
+    }
+  }
+}

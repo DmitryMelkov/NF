@@ -1,0 +1,48 @@
+@import "_variables";
+
+.artists {
+  padding-top: 100px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
+    width: 45%;
+    margin-right: 30px;
+  }
+  &__right {
+    width: 52%;
+  }
+  &__header {
+    margin-bottom: 12px;
+  }
+  &__descr {
+    max-width: 559px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .artists {
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__right {
+      margin-bottom: 50px;
+    }
+    &__left,
+    &__right {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .artists {
+    &__header, &__descr {
+      max-width: none;
+      text-align: center;
+    }
+  }
+}

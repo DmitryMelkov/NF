@@ -1,0 +1,240 @@
+@import "_variables";
+@import "_mixins";
+
+.contacts {
+  &__container {
+    display: flex;
+  }
+  &__left {
+    width: 55%;
+    margin-right: 30px;
+  }
+  &__header {
+    margin-bottom: 27px;
+    @include text(46px, 58.79px, 800, $colorBlack);
+  }
+  &__descr {
+    margin-bottom: 26px;
+    max-width: 575px;
+    @include text(20px, 31px, 700, $colorGrey);
+  }
+  &__cards-item {
+    padding: 43px 62px;
+    box-shadow: 0px 35px 55px -12px rgba(57, 49, 117, 0.1);
+    border-radius: 14px;
+  }
+  &__cards-title {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 800;
+    color: $colorBlack;
+  }
+  &__cards-descr {
+    margin-bottom: 57px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $colorBlack;
+  }
+  &__cards-social {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__cards-social-item {
+    display: inline-block;
+    margin-bottom: 33px;
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 600;
+    color: $colorBlack;
+    transition: color 0.3s ease-in-out;
+  }
+  &__cards-social-item:last-child {
+    margin-bottom: 0;
+  }
+  &__cards-number,
+  &__cards-email,
+  &__cards-telegram {
+    padding-left: 35px;
+    position: relative;
+  }
+  &__cards-number::before,
+  &__cards-email::before,
+  &__cards-telegram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 28px;
+    height: 23px;
+  }
+  &__cards-number::before {
+    background-image: url("../img/contacts-icon-phone.svg");
+  }
+  &__cards-email::before {
+    background-image: url("../img/contacts-icon-email.svg");
+  }
+  &__cards-telegram::before {
+    background-image: url("../img/contacts-icon-telegram.svg");
+  }
+  &__right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__right-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  &__icon-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 360px;
+  }
+  &__icon-header {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 800;
+  }
+  &__icon-link {
+    transition-property: opacity;
+    @include transition;
+  }
+  &__icon-svg {
+    width: 32px;
+    height: 33px;
+  }
+  &__cards-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__cards-box:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &__cards-box-span {
+    @include text(20px, 25px, 600, $colorGrey);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contacts {
+    &__cards-social-item:hover {
+      color: $colorPurpleHover;
+    }
+    &__icon-link:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+//active, focus
+.contacts {
+  &__cards-social-item:active {
+    color: $colorPurpleActive;
+  }
+  &__cards-social-item:focus-visible:not(:active) {
+    outline: none;
+    color: $colorPurpleActive;
+  }
+  &__icon-link:active {
+    opacity: 0.5;
+  }
+  &__icon-link:focus-visible {
+    opacity: 0.5;
+    outline: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts {
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__left,
+    &__right {
+      width: 100%;
+    }
+    &__left {
+      margin-right: 0;
+    }
+    &__right {
+      margin-bottom: 30px;
+    }
+    &__cards-item {
+      margin: 0 auto;
+      padding: 30px 15px;
+      max-width: 800px;
+    }
+    &__cards-title {
+      font-size: 24px;
+      line-height: 31px;
+    }
+    &__cards-descr {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    &__cards-social-item {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    &__icon-header {
+      margin-bottom: 35px;
+      font-size: 22px;
+      line-height: 28px;
+      position: relative;
+    }
+    &__icon-header::after {
+      content: "";
+      position: absolute;
+      top: 40px;
+      left: 0;
+      height: 0;
+      z-index: 1;
+      width: 100%;
+      height: 1px;
+      background-color: #dadada;
+    }
+    &__header {
+      text-align: center;
+      @include text(32px, 40px, 800, $colorBlack);
+    }
+    &__descr {
+      margin: 0 auto;
+      text-align: center;
+      @include text(18px, 28px, 700, $colorGrey);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contacts {
+    &__header {
+      @include text(26px, 30px, 800, $colorBlack);
+    }
+    &__descr {
+      @include text(16px, 22px, 700, $colorGrey);
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .contacts {
+    &__cards-box {
+      flex-direction: column;
+    }
+    &__cards-box-span {
+      @include text(15px, 25px, 700, $colorGrey);
+      margin-bottom: 15px;
+    }
+  }
+}

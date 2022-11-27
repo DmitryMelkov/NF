@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{ "title": "Careers" })
+
+<body>
+  @@include('html/header.html',{ })
+  <main>
+    <!-- artists -->
+    <section class="artists">
+      <div class="container artists__container">
+        <div class="artists__left">
+          <h1 class="visually-hidden"></h1>
+          <p class="artists__descr careers__descr title-reset">We are hiring for</p>
+          <h2 class="artists__header title-reset">NFT Artist</h2>
+          <p class="artists__descr careers__descr-p title-reset">We are always looking for a perspective NFT Artists to
+            join our fully
+            remote team</p>
+            <input class="copywriter__input" value="ColabArtist" type="text" name="copy" id="copy">
+          <div class="copywriter__btn">
+            <button class="copywriter__btn-click copywriter__btn-click-email btn-reset">Copy comand</button>
+            <button class="copywriter__btn-click copywriter__btn-click-telegram btn-reset">Leran more</button>
+          </div>
+        </div>
+        <div class="artists__right">
+          <img class="artists__right-img" src="@img/artist-img-content.png" alt="artists-img">
+        </div>
+      </div>
+    </section>
+    <!-- hot-vacancies -->
+    <section class="seo">
+      <div class="container seo__container">
+        <div class="seo__left">
+          <img src="@img/hot-vacancies-content-img.png" alt="hot-vacancies-img" class="seo__content-img">
+        </div>
+        <div class="seo__right">
+          <p class="seo__descr careers__descr descr-reset">HOT VACANCIES </p>
+          <h2 class="seo__header title-reset">CEO specialists, marketers</h2>
+          <p class="seo__descr careers__descr-p title-reset">специлизирующихся на нфт
+            придумываем к каждому экрану плюшки мол мы такие крутые свободная занятость много платим итд итп
+          </p>
+          <div class="copywriter__btn">
+            <button class="copywriter__btn-click copywriter__btn-click-email btn-reset">Copy comand</button>
+            <button class="copywriter__btn-click copywriter__btn-click-telegram btn-reset">Write now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- copywriter -->
+    <section class="copywriter">
+      <div class="container copywriter__container">
+        <div class="copywriter__left">
+          <p class="copywriter__descr careers__descr title-reset">We are hiring for</p>
+          <h2 class="copywriter__header title-reset">Copywriter</h2>
+          <p class="copywriter__descr careers__descr-p title-reset">
+            We are always looking for a specialists who can generate cool thematic articles with a deep understanding of
+            the NFT field
+            Options for full time or part time positions are available.
+          </p>
+          <span class="copywriter__span">Get in touch with us today!</span>
+          <div class="copywriter__btn">
+            <button class="copywriter__btn-click copywriter__btn-click-email btn-reset">Copy comand</button>
+            <button class="copywriter__btn-click copywriter__btn-click-telegram btn-reset">Murch more</button>
+          </div>
+        </div>
+        <div class="copywriter__right">
+          <img src="@img/copywriter-img-content-img.png" alt="copywriter-img" class="copywriter__right-img">
+        </div>
+      </div>
+    </section>
+
+  </main>
+  @@include('html/footer.html',{ })
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

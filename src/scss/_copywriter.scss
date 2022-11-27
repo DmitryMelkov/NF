@@ -1,0 +1,142 @@
+@import "_variables";
+
+.copywriter {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
+    width: 45%;
+    margin-right: 30px;
+  }
+  &__right {
+    width: 52%;
+  }
+  &__header {
+    margin-bottom: 12px;
+  }
+  &__descr {
+    max-width: 559px;
+    margin-bottom: 20px;
+  }
+  &__span {
+    display: block;
+    margin-bottom: 28px;
+    font-size: 24px;
+    line-height: 25px;
+    font-weight: 800;
+    color: $colorBlack;
+  }
+
+  &__btn-click {
+    display: inline-block;
+    position: relative;
+    min-width: 290px;
+    padding: 18px 51px 18px 66px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 12px;
+
+    color: $colorWhite;
+    transition: background-color 0.3s ease-in-out;
+  }
+  &__btn-click::before {
+    content: "";
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__btn-click-email {
+    background-color: $colorPurple;
+    border: 1px solid $colorPurple;
+    margin-right: 30px;
+  }
+  &__btn-click-email::before {
+    top: 20px;
+    left: 35px;
+    background-image: url("../img/btn-email.svg");
+    width: 17px;
+    height: 14px;
+  }
+  &__btn-click-telegram {
+    background-color: $colorBlue;
+    border: 1px solid $colorBlue;
+  }
+  &__btn-click-telegram::before {
+    top: 20px;
+    left: 35px;
+    background-image: url("../img/btn-telegram.svg");
+    width: 17px;
+    height: 14px;
+  }
+  &__input {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .copywriter {
+    &__btn-click-email:hover {
+      background-color: $colorPurpleHover;
+      border: 1px solid $colorPurpleHover;
+    }
+    &__btn-click-telegram:hover {
+      background-color: $colorBlueHover;
+      border: 1px solid $colorBlueHover;
+    }
+  }
+}
+
+.copywriter {
+  &__btn-click-email:active {
+    background-color: $colorPurpleActive;
+    border: 1px solid $colorPurpleActive;
+  }
+  &__btn-click-telegram:active {
+    background-color: $colorBlueActive;
+    border: 1px solid $colorBlueActive;
+  }
+}
+
+@media (max-width: 768px) {
+  .copywriter {
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__right {
+      margin-bottom: 50px;
+    }
+    &__left,
+    &__right {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .copywriter {
+    &__btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__btn-click {
+      min-width: 290px;
+    }
+    &__btn-click-email {
+      margin-right: 0;
+    }
+    &__header, &__descr, &__span {
+      max-width: none;
+      text-align: center;
+    }
+  }
+}
+

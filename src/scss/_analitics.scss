@@ -1,0 +1,137 @@
+@import "_variables";
+
+.analitics {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  &__container {
+    justify-content: space-between;
+  }
+  &__bg {
+    position: absolute;
+    top: -150px;
+    left: 0;
+    background-image: url("../img/analitics-bg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 1300px;
+    z-index: -1;
+  }
+  &__descr {
+    padding-bottom: 30px;
+    @include text(20px, 31px, 700, $colorGrey);
+  }
+  &__right {
+    max-width: 656px;
+  }
+  &__right-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: 800;
+    color: $colorBlack;
+  }
+  &__left-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .analitics {
+    &__left-img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .analitics {
+    &__bg {
+      height: 1436px;
+    }
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .analitics {
+    &__bg {
+      top: -200px;
+    }
+    &__descr {
+      @include text(18px, 28px, 700, $colorGrey);
+    }
+    &__right-title {
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .analitics {
+    &__container {
+      flex-direction: column-reverse;
+    }
+    &__bg {
+      height: 2200px;
+      top: -300px;
+    }
+    &__descr {
+      text-align: center;
+    }
+    &__right {
+      margin-bottom: 70px;
+      max-width: none;
+    }
+
+    &__left {
+      margin-bottom: 0;
+    }
+    &__right-title {
+      text-align: center;
+    }
+
+  }
+}
+
+@media (max-width: 800px) {
+  .analitics {
+    &__content-swiper {
+      display: flex;
+      gap: 0;
+    }
+    &__slide {
+      padding-bottom: 50px;
+    }
+    &__bg {
+      height: 1843px;
+    }
+
+    &__descr {
+      @include text(16px, 22px, 700, $colorGrey);
+    }
+  }
+}
+
+.analitics__swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $colorPurple;
+}
+
+@media (max-width: 550px) {
+  .analitics {
+    &__bg {
+      height: 1700px;
+      top: -255px;
+    }
+  }
+}

@@ -1,0 +1,762 @@
+@import "_variables";
+
+.course-body {
+  padding-top: 400px;
+  background-image: url("../img/course-basics-body-bg.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img-content {
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+  }
+  &__img-box {
+    position: absolute;
+    top: 45%;
+    opacity: 0;
+  }
+  &__img-box--left {
+    left: 0;
+    transform: translateX(-800px);
+    transition: transform 0.6s ease-in-out;
+  }
+  &__img-box--right {
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
+  }
+  &__img-box-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+  &__img-box-text {
+    font-size: 18px;
+    line-height: 25px;
+    color: $colorGrey;
+  }
+  &__title-span {
+    color: $colorPurple;
+  }
+  &__basics {
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__basics-left {
+    width: 42%;
+    margin-right: 30px;
+  }
+  &__basics-right {
+    width: 55%;
+    max-width: 600px;
+  }
+
+  &__basics-content-box-container {
+    position: relative;
+  }
+  &__basics-right-container {
+    margin-top: 46px;
+    padding-bottom: 50px;
+  }
+  &__basics-swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 3fr);
+    gap: 30px;
+  }
+  &__basics-item {
+    padding: 30px;
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 167px;
+    height: auto;
+    background: linear-gradient(180deg, #a031f1 0%, #d623ff 100%);
+    border-radius: 15px;
+    border: 1px solid $colorPurple;
+    transition-property: all;
+    @include transition;
+  }
+  &__item-descr {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: $colorWhite;
+  }
+  &__number {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+  }
+  &__number-1 {
+    top: 8px;
+    left: -100px;
+  }
+}
+
+.course-body {
+  &__market {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__left-market {
+    width: 50%;
+    margin-right: 30px;
+  }
+  &__right-market {
+    width: 47%;
+  }
+  &__market-content {
+    padding-left: 108px;
+  }
+  &__market-header {
+    margin-bottom: 10px;
+  }
+  &__market-descr {
+    max-width: 380px;
+    margin-bottom: 50px;
+  }
+  &__market-container {
+    margin-top: 46px;
+    padding-bottom: 50px;
+  }
+  &__market-swiper-wrapper {
+    max-width: 488px;
+    display: grid;
+    grid-template-columns: repeat(6, 3fr);
+    gap: 30px;
+  }
+  &__market-item {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition-property: all;
+    @include transition;
+  }
+  &__market-item:nth-child(2n) {
+    margin-right: 0;
+  }
+  &__market-item-descr {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__number-2 {
+    top: 0;
+    left: 0;
+  }
+  &__market-content-box-container {
+    position: relative;
+  }
+}
+
+.course-body {
+  &__tools {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__tools-left {
+    width: 45%;
+    margin-right: 30px;
+  }
+  &__tools-right {
+    width: 52%;
+    // position: relative;
+    max-width: 600px;
+  }
+  &__tools-header {
+    max-width: 501px;
+    margin-bottom: 10px;
+  }
+  &__tools-descr {
+    max-width: 501px;
+    margin-bottom: 46px;
+  }
+  &__tools-container {
+    margin-top: 46px;
+    padding-bottom: 50px;
+  }
+  &__tools-swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__tools-item {
+    max-width: 432px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: 26px;
+    background-color: $colorWhite;
+    border: 1px solid transparent;
+    box-shadow: 0px 35px 55px -12px rgba(57, 49, 117, 0.1);
+    border-radius: 14px;
+    transition-property: all;
+    @include transition;
+  }
+  &__tools-svg {
+    margin-right: 24px;
+  }
+  &__tools-item-descr {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__number-3 {
+    top: 42px;
+    left: -114px;
+  }
+  &__tools-content-box-container {
+    position: relative;
+  }
+}
+
+.course-body {
+  &__strategy {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__strategy-left {
+    width: 50%;
+    margin-right: 30px;
+    max-width: 600px;
+    // position: relative;
+  }
+  &__strategy-header {
+    margin-bottom: 20px;
+  }
+
+  &__strategy-container {
+    margin-top: 46px;
+    padding-bottom: 50px;
+    margin-left: 108px;
+  }
+  &__strategy-content {
+    padding-left: 108px;
+  }
+  &__strategy-content-box-container {
+    position: relative;
+  }
+  &__strategy-swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 3fr);
+    gap: 30px;
+  }
+  &__strategy-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column: span 3;
+    padding: 30px;
+
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #a031f1 0%, #d623ff 100%);
+    border: 1px solid $colorPurple;
+    transition-property: all;
+    @include transition;
+  }
+
+  &__strategy-item-descr {
+    text-align: center;
+    font-size: 16px;
+    line-height: 21px;
+    color: $colorWhite;
+  }
+  &__strategy-item-svg {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+  &__number-4 {
+    top: 48px;
+    left: 0;
+  }
+  &__strategy-right {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.course-body {
+  &__risks {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__risks-left {
+    width: 45%;
+    margin-right: 30px;
+  }
+  &__risks-right {
+    width: 52%;
+    max-width: 641px;
+  }
+  &__risks-header {
+    margin-bottom: 10px;
+  }
+  &__risks-descr {
+    margin-bottom: 46px;
+  }
+  &__risks-container {
+    margin-top: 46px;
+    padding-bottom: 50px;
+  }
+  &__risks-swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__risks-item {
+    max-width: 432px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: 26px;
+
+    background-color: $colorWhite;
+    border: 1px solid transparent;
+    box-shadow: 0px 35px 55px -12px rgba(57, 49, 117, 0.1);
+    border-radius: 14px;
+    transition-property: all;
+    @include transition;
+  }
+  &__risks-svg {
+    margin-right: 24px;
+  }
+  &__risks-item-descr {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__number-5 {
+    top: 42px;
+    left: -114px;
+  }
+  &__risks-content-box-container {
+    position: relative;
+  }
+}
+
+.course-body {
+  &__case {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__case-left {
+    width: 45%;
+    margin-right: 30px;
+    max-width: 600px;
+  }
+  &__case-header {
+    margin-bottom: 20px;
+    padding-left: 100px;
+  }
+  &__case-container {
+    margin-top: 46px;
+    padding-bottom: 50px;
+    margin-left: 108px;
+  }
+  &__case-swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__case-item {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition-property: all;
+    @include transition;
+  }
+  &__case-item-img {
+    padding: 20px;
+    background-image: url("../img/strategy-item-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 118px;
+    height: 113px;
+    border-radius: 20px;
+  }
+  &__case-item-svg {
+    width: 73px;
+    height: 73px;
+  }
+  &__case-item-descr {
+    margin-left: 33px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  &__number-6 {
+    top: 48px;
+    left: 0;
+  }
+  &__case-right {
+    width: 52%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.title-css {
+  color: $colorPurple;
+  text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.course-body__img-box--left.active {
+  transform: translateX(10px);
+  opacity: 1;
+}
+.course-body__img-box--right.active {
+  opacity: 1;
+}
+
+.course-body__img-content.active {
+  opacity: 0;
+}
+
+@media (min-width: 1024px) {
+  @keyframes tipsy {
+    0% {
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+
+  .course-body__title-basics-js {
+    position: relative;
+    letter-spacing: -3px;
+    margin: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .course-body__title-basics-js::before,
+  .course-body__title-basics-js::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    width: 120%;
+    top: 50%;
+    height: 100px;
+    display: block;
+    border: 3px solid $colorPurpleActive;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 10s infinite alternate ease-in-out tipsy;
+    z-index: -1;
+  }
+
+  .course-body {
+    &__basics-item:hover,
+    &__strategy-item:hover {
+      transform: scale(0.8);
+      border: 1px solid $colorPurple;
+      box-shadow: 0px 0px 20px 5px rgb(178 45 246 / 60%);
+    }
+    &__market-item:hover,
+    &__case-item:hover {
+      border: 2px solid $colorPurple;
+      transform: scale(0.8);
+    }
+    &__tools-item:hover,
+    &__risks-item:hover {
+      border: 1px solid $colorPurple;
+      transform: translateX(50px);
+    }
+  }
+}
+
+//active, focus
+.course-body {
+  &__basics-item:active,
+  &__strategy-item:active {
+    transform: scale(0.8);
+    border: 1px solid $colorPurpleActive;
+    box-shadow: 0px 0px 20px 5px rgb(178 45 246 / 60%);
+  }
+  &__basics-item:focus-visible,
+  &__strategy-item:focus-visible {
+    transform: scale(0.8);
+    border: 1px solid $colorPurpleActive;
+    box-shadow: 0px 0px 20px 5px rgb(178 45 246 / 60%);
+    outline: none;
+  }
+  &__market-item:active,
+  &__case-item:active {
+    border: 2px solid $colorPurpleActive;
+    transform: scale(0.8);
+  }
+  &__market-item:focus-visible,
+  &__case-item:focus-visible {
+    border: 2px solid $colorPurpleActive;
+    transform: scale(0.8);
+    outline: none;
+  }
+  &__tools-item:active,
+  &__risks-item:active {
+    border: 1px solid $colorPurpleActive;
+    transform: scale(0.8);
+  }
+  &__tools-item:focus-visible,
+  &__risks-item:focus-visible {
+    border: 1px solid $colorPurpleActive;
+    transform: scale(0.8);
+    outline: none;
+  }
+}
+
+.course-body__basics-swiper .swiper-pagination-bullet,
+.course-body__market-swiper .swiper-pagination-bullet,
+.course-body__tools-swiper .swiper-pagination-bullet,
+.course-body__strategy-swiper .swiper-pagination-bullet,
+.course-body__risks-swiper .swiper-pagination-bullet,
+.course-body__case-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $colorPurple;
+}
+
+@media (max-width: 1400px) {
+  .course-body {
+    &__number-1 {
+      top: -82px;
+      left: -89px;
+    }
+    &__number-3 {
+      top: -98px;
+      left: 21px;
+    }
+    &__number-5 {
+      top: -106px;
+      left: 38px;
+    }
+    &__strategy-container,
+    &__case-container {
+      margin-left: 60px;
+    }
+  }
+}
+
+@media (max-width: 1062px) {
+  .course-body {
+    &__basics-header {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    &__strategy-container,
+    &__case-container {
+      margin-left: 0;
+    }
+    &__market,
+    &__strategy {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .course-body {
+    height: 4915px;
+  }
+}
+
+@media (max-width: 900px) {
+  .course-body {
+    height: auto;
+    padding-top: 363px;
+    &__img {
+      padding-top: 80px;
+    }
+    &__basics-swiper-wrapper,
+    &__market-swiper-wrapper,
+    &__strategy-swiper-wrapper {
+      display: flex;
+      gap: 0;
+    }
+    &__basics,
+    &__market,
+    &__tools,
+    &__strategy,
+    &__risks,
+    &__case {
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__market,
+    &__strategy,
+    &__case {
+      flex-direction: column-reverse;
+    }
+    &__basics-left,
+    &__right-market,
+    &__tools-left,
+    &__strategy-right,
+    &__risks-left,
+    &__case-left {
+      width: 100%;
+      margin-right: 0;
+      max-width: 600px;
+    }
+    &__basics-right,
+    &__tools-right,
+    &__left-market,
+    &__strategy-left,
+    &__risks-right,
+    &__case-right {
+      width: 100%;
+      max-width: 600px;
+      margin-right: 0;
+    }
+    &__number-1,
+    &__number-2,
+    &__number-3,
+    &__number-4,
+    &__number-5,
+    &__number-6 {
+      top: 0px;
+      left: -109px;
+    }
+    &__case-header,
+    &__strategy-header,
+    &__market-header {
+      padding-left: 0;
+    }
+    &__number {
+      left: 0;
+    }
+    &__basics-content,
+    &__market-content,
+    &__tools-content,
+    &__strategy-content,
+    &__risks-content,
+    &__case-content {
+      padding-left: 108px;
+    }
+    &__basics-content-box,
+    &__market-content-box,
+    &__tools-content-box,
+    &__strategy-content-box,
+    &__risks-content-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    &__tools-swiper-wrapper,
+    &__risks-swiper-wrapper,
+    &__case-swiper-wrapper {
+      flex-direction: row;
+    }
+    &__tools-item,
+    &__risks-item {
+      margin-bottom: 0;
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .course-body {
+    &__img-box-title {
+      font-size: 22px;
+      line-height: 26px;
+    }
+    &__img-box-text {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: 665px) {
+  .course-body {
+    &__number {
+      width: 40px;
+      height: 40px;
+    }
+    &__basics-content,
+    &__market-content,
+    &__tools-content,
+    &__strategy-content,
+    &__risks-content {
+      padding-left: 60px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .course-body {
+    &__img {
+      padding-top: 100px;
+    }
+    &__tools,
+    &__risks,
+    &__basics,
+    &__market,
+    &__strategy,
+    &__case {
+      align-items: center;
+    }
+    &__tools-item-descr,
+    &__risks-item-descr,
+    &__case-item-descr {
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .course-body {
+    &__img {
+      padding-top: 180px;
+    }
+    &__basics-content,
+    &__market-content,
+    &__tools-content,
+    &__strategy-content,
+    &__risks-content,
+    &__case-content {
+      padding-top: 50px;
+      padding-left: 0;
+    }
+  }
+}

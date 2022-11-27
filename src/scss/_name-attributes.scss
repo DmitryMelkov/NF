@@ -1,0 +1,289 @@
+@import "_variables";
+@import "_mixins";
+
+.name-attributes {
+  background-color: $colorGreyLight;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__top {
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+  &__top-btn {
+    grid-column: span 2;
+    max-width: 245px;
+    height: 58px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    @include text(18px, 23px, 800, $colorWhite);
+
+    border: 1px solid $colorPurpleLight;
+    background-color: $colorPurpleLight;
+    color: $colorWhite;
+    border-radius: 12px;
+    transition-property: background-color;
+    @include transition;
+  }
+  &__bottom {
+    display: flex;
+  }
+  &__aside {
+    padding: 16px 20px;
+    width: 100%;
+    max-width: 323px;
+    margin-right: 24px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    background-color: $colorWhite;
+  }
+  &__bottom-right {
+    width: 100%;
+  }
+  &__title-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $colorNameCollectionGreyBorder;
+  }
+  &__title {
+    @include text(20px, 26px, 800, $colorPurple);
+  }
+  &__title-svg {
+    width: 8px;
+    height: 15px;
+    color: $colorPurple;
+    display: none;
+  }
+  &__item {
+    margin-bottom: 18px;
+  }
+  &__list {
+    margin-top: 15px;
+  }
+  &__item-btn {
+    padding-left: 20px;
+    position: relative;
+    @include text(16px, 20px, 800, $colorBlack);
+  }
+  &__item-btn::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    z-index: 1;
+    display: inline-block;
+    border: 6px solid transparent;
+    border-left: 12px solid $colorBlack;
+  }
+  &__item-btn.active {
+    @include text(16px, 20px, 800, $colorPurple);
+  }
+  &__item-btn.active::before {
+    border: 6px solid transparent;
+    border-top: 12px solid $colorPurple;
+  }
+  &__item-list {
+    padding-left: 16px;
+    display: none;
+    flex-direction: column;
+  }
+  &__item-list.active {
+    display: flex;
+  }
+
+  &__item-item-btn {
+    padding-left: 15px;
+    margin-bottom: 3px;
+    width: 100%;
+    min-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: $colorNameCollectionGreyBorder;
+  }
+  &__item-item-span {
+    @include text(16px, 20px, 600, $colorBlack);
+  }
+  &__item-item-span:last-child {
+    margin-right: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 15px;
+    padding-right: 8px;
+    background-color: $colorWhite;
+    border-radius: 5px;
+  }
+  &__bottom-list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 19px;
+    justify-items: center;
+    padding: 40px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    background-color: $colorWhite;
+  }
+  &__bottom-item {
+    max-width: 218px;
+    grid-column: span 3;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: $colorWhite;
+  }
+  &__bottom-img-content {
+    padding-top: 21px;
+    display: flex;
+    justify-content: center;
+  }
+  &__bottom-title {
+    margin: 13px 0;
+    @include text(18px, 23px, 800, $colorBlackDark);
+    text-align: center;
+  }
+  &__card-box {
+    display: flex;
+  }
+  &__span-title {
+    text-align: center;
+    @include text(11px, 14px, 600, $colorBlackDark);
+  }
+  &__span-number {
+    @include text(15px, 19px, 800, $colorBlackDark);
+  }
+  &__span-last {
+    @include text(13px, 16px, 700, $colorBlackDark);
+  }
+  &__card-list {
+    padding: 21px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+  }
+  &__card-item {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__card-item-last {
+    grid-column: span 4;
+    justify-self: center;
+    background-color: $colorWhite;
+    box-shadow: 0px 12.5216px 10.0172px rgba(73, 48, 115, 0.035), 0px 6.6501px 5.32008px rgba(73, 48, 115, 0.0282725),
+      0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 7px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .name-attributes {
+    &__top-btn:hover {
+      background-color: $colorPurple;
+    }
+  }
+}
+
+.name-attributes {
+  &__top-btn:active {
+    background-color: $colorPurple;
+  }
+  &__top-btn:focus-visible {
+    background-color: $colorPurple;
+    outline: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .name-attributes {
+    &__bottom-list {
+      padding: 20px;
+    }
+    &__bottom-item {
+      grid-column: span 4;
+    }
+    &__aside {
+      max-width: 301px;
+    }
+    &__card-list {
+      padding: 10px;
+    }
+    &__top {
+      grid-template-columns: repeat(15, 1fr);
+    }
+    &__top-btn {
+      grid-column: span 3;
+    }
+  }
+}
+
+@media (max-width: 910px) {
+  .name-attributes {
+    &__top-btn {
+      grid-column: span 5;
+    }
+    &__bottom-item {
+      grid-column: span 6;
+    }
+    &__aside {
+      max-width: 270px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .name-attributes {
+    &__bottom {
+      flex-direction: column;
+    }
+    &__aside {
+      margin-bottom: 32px;
+      max-width: none;
+    }
+    &__list {
+      display: none;
+    }
+    &__list.active {
+      display: block;
+    }
+    &__title-content {
+      border-bottom: none;
+      padding-bottom: 0;
+      cursor: pointer;
+
+    }
+    &__title-svg {
+      display: block;
+      transition-property: transform;
+      @include transition;
+    }
+    &__title-content.active &__title-svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .name-attributes {
+    &__top-btn {
+      grid-column: span 15;
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .name-attributes {
+    &__top {
+      gap: 10px;
+    }
+    &__bottom-item {
+      grid-column: span 12;
+    }
+  }
+}

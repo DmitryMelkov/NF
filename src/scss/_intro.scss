@@ -1,0 +1,161 @@
+@import "_variables";
+@import "_mixins";
+
+.intro {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  &__container {
+    display: flex;
+  }
+  &__left {
+    width: 45%;
+    margin-right: 30px;
+  }
+  &__left-img {
+    margin-bottom: 69px;
+  }
+  &__descr {
+    margin-bottom: 43px;
+    @include text(20px, 31px, 700, $colorGrey);
+  }
+
+  &__right {
+    width: 52%;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(9, 3fr);
+    row-gap: 75px;
+    column-gap: 47px;
+  }
+  &__item {
+    grid-column: span 3;
+  }
+  &__content-img {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  &__img-bg {
+    width: 101px;
+    height: 101px;
+    background: linear-gradient(90.45deg, #d722ff 0.39%, #9a32ef 102.83%);
+    border-radius: 14px;
+    border: 1px solid $colorPurple;
+  }
+  &__img-grid {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+  }
+  &__content-descr {
+    font-size: 14px;
+    line-height: 22px;
+    color: $colorGrey;
+  }
+}
+
+@media (max-width: 1400px) {
+  .intro {
+    &__left-img {
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .intro {
+    &__content {
+      grid-template-columns: repeat(6, 3fr);
+      gap: 55px;
+    }
+
+    &__left-img {
+      max-width: 373px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro {
+    &__descr {
+      margin-bottom: 43px;
+      @include text(18px, 28px, 700, $colorGrey);
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  .intro {
+    &__container {
+      flex-direction: column;
+    }
+    &__left {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 88px;
+    }
+    &__left-img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__descr {
+      text-align: center;
+    }
+    &__right {
+      width: 100%;
+    }
+    &__img-bg {
+      position: relative;
+    }
+    &__content-img {
+      display: flex;
+      justify-content: center;
+    }
+    &__content-descr {
+      text-align: center;
+    }
+    &__btn {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    &__content-swiper {
+      display: flex;
+      gap: 0;
+    }
+    &__item-slide {
+      padding-bottom: 50px;
+    }
+
+
+    &__descr {
+      @include text(16px, 22px, 700, $colorGrey);
+    }
+  }
+}
+
+.intro__right-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $colorPurple;
+}
+
+@media (max-width: 550px) {
+  .intro {
+    &__content {
+      grid-template-columns: repeat(3, 3fr);
+    }
+  }
+}
