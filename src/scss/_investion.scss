@@ -39,7 +39,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 270px;
+    // max-width: 270px;
     padding: 25px;
     box-shadow: 0px 35px 55px -12px rgba(57, 49, 117, 0.1);
     border-radius: 14px;
@@ -66,6 +66,7 @@
   }
   &__container-2 {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 30px;
   }
   &__left {
@@ -92,7 +93,7 @@
 @media (max-width: 1200px) {
   .invest {
     &__item {
-      grid-column: span 4;
+      grid-column: span 5;
     }
     &__bg {
       height: 1521px;
@@ -103,9 +104,9 @@
 
 @media (max-width: 1024px) {
   .invest {
-    &__item {
-      margin-right: 22px;
-    }
+    // &__item {
+    //   margin-right: 22px;
+    // }
     &__right {
       padding-top: 20px;
     }
@@ -118,11 +119,12 @@
 
 @media (max-width: 923px) {
   .invest {
-    &__header {
+    &__right-header {
       text-align: center;
     }
-    &__descr {
-      margin: 0 auto 49px;
+    &__right-descr {
+      text-align: center;
+      // margin: 0 auto 49px;
     }
     &__content {
       justify-content: center;
@@ -138,17 +140,20 @@
     }
     &__left {
       width: 100%;
+      margin-right: 0;
+      text-align: center;
     }
     &__right {
       width: 100%;
     }
 
     &__btn {
-      margin: 0 auto;
+      text-align: center;
+      // margin: 0 auto;
     }
-    &__item {
-      grid-column: span 6;
-    }
+    // &__item {
+    //   grid-column: span 6;
+    // }
   }
 }
 

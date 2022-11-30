@@ -276,10 +276,10 @@ td {
 }
 
 .container {
-  max-width: 1586px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 15px;
 }
 
 .careers__descr {
@@ -1046,6 +1046,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .intro__left {
@@ -1055,6 +1058,7 @@ button.swiper-pagination-bullet {
 
 .intro__left-img {
   margin-bottom: 69px;
+  max-width: 500px;
 }
 
 .intro__descr {
@@ -1184,7 +1188,6 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 270px;
   padding: 25px;
   -webkit-box-shadow: 0px 35px 55px -12px rgba(57, 49, 117, 0.1);
           box-shadow: 0px 35px 55px -12px rgba(57, 49, 117, 0.1);
@@ -1219,6 +1222,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 30px;
 }
 
@@ -1782,6 +1788,7 @@ button.swiper-pagination-bullet {
 }
 
 .contacts__cards-box-span {
+  margin-right: 15px;
   font-size: 20px;
   line-height: 25px;
   font-weight: 600;
@@ -1825,6 +1832,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .services__left {
@@ -1891,6 +1901,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .ambasadors__left {
@@ -1955,6 +1968,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .influence__top-left,
@@ -1995,6 +2011,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .influence__bottom-left {
@@ -2133,7 +2152,7 @@ button.swiper-pagination-bullet {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 18%;
+  width: 30%;
 }
 
 .cookie__switch-container {
@@ -2240,7 +2259,7 @@ button.swiper-pagination-bullet {
 }
 
 .cookie__tabs-content {
-  width: 82%;
+  width: 70%;
 }
 
 .cookie__tabs-item {
@@ -5000,10 +5019,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1400px) {
-  .intro__left-img {
-    max-width: 500px;
-  }
-
   .analitics__left-img {
     max-width: 100%;
   }
@@ -5096,8 +5111,8 @@ button.swiper-pagination-bullet {
   }
 
   .invest__item {
-    -ms-grid-column-span: 4;
-    grid-column: span 4;
+    -ms-grid-column-span: 5;
+    grid-column: span 5;
   }
 
   .invest__bg {
@@ -5301,10 +5316,6 @@ button.swiper-pagination-bullet {
     line-height: 28px;
     font-weight: 700;
     color: #7a7a7a;
-  }
-
-  .invest__item {
-    margin-right: 22px;
   }
 
   .invest__right {
@@ -5588,12 +5599,12 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 923px) {
-  .invest__header {
+  .invest__right-header {
     text-align: center;
   }
 
-  .invest__descr {
-    margin: 0 auto 49px;
+  .invest__right-descr {
+    text-align: center;
   }
 
   .invest__content {
@@ -5622,6 +5633,8 @@ button.swiper-pagination-bullet {
 
   .invest__left {
     width: 100%;
+    margin-right: 0;
+    text-align: center;
   }
 
   .invest__right {
@@ -5629,12 +5642,7 @@ button.swiper-pagination-bullet {
   }
 
   .invest__btn {
-    margin: 0 auto;
-  }
-
-  .invest__item {
-    -ms-grid-column-span: 6;
-    grid-column: span 6;
+    text-align: center;
   }
 }
 
@@ -6332,12 +6340,14 @@ button.swiper-pagination-bullet {
     margin-top: 50px;
     font-size: 28px;
     line-height: 36px;
+    text-align: center;
   }
 
   .course-intro__descr-left {
     max-width: none;
     font-size: 15px;
     line-height: 22px;
+    text-align: center;
   }
 
   .course-intro__right {
@@ -6347,6 +6357,16 @@ button.swiper-pagination-bullet {
   .course-intro__header-right {
     font-size: 24px;
     line-height: 30px;
+  }
+
+  .course-intro__btns {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .course-intro__img-container {
+    text-align: center;
   }
 }
 

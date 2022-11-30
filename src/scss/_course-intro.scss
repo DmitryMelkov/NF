@@ -295,11 +295,13 @@
       margin-top: 50px;
       font-size: 28px;
       line-height: 36px;
+      text-align: center;
     }
     &__descr-left {
       max-width: none;
       font-size: 15px;
       line-height: 22px;
+      text-align: center;
     }
     &__right {
       width: 100%;
@@ -307,6 +309,12 @@
     &__header-right {
       font-size: 24px;
       line-height: 30px;
+    }
+    &__btns {
+      justify-content: center;
+    }
+    &__img-container {
+      text-align: center;
     }
 
   }
