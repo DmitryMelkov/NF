@@ -324,6 +324,23 @@ td {
   opacity: 1;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+  /* ширина scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #efeff8;
+  /* цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #b72bf6;
+  /* цвет плашки */
+  border-radius: 20px;
+  /* закругления плашки */
+}
+
 /**
  * Swiper 8.4.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
