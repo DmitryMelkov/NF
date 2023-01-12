@@ -3,14 +3,36 @@ import Swiper, { Pagination, Navigation, Autoplay } from 'swiper';
 export function mainSlider() {
   var swiper1 = new Swiper('.main__swiper-1', {
     modules: [Pagination, Navigation, Autoplay],
-    loop: true,
-    slidesPerView: 'auto',
+    // loop: true,
+    // slidesPerView: 'auto',
+
     autoplay: {
-      delay: 2000,
+      delay: 1000,
       disableOnInteraction: false,
     },
     slideToClickedSlide: true,
-    speed: 1000,
+    speed: 500,
+
+    navigation: {
+      nextEl: '.main__btn-next',
+      prevEl: '.main__btn-prev',
+    },
+    pagination: {
+      el: '.main__pagination-js',
+    },
+  });
+
+  var swiper2 = new Swiper('.main__swiper-2', {
+    modules: [Pagination, Navigation, Autoplay],
+    // loop: true,
+    // slidesPerView: 'auto',
+
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    slideToClickedSlide: true,
+    speed: 500,
 
     navigation: {
       nextEl: '.main__btn-next',
@@ -26,27 +48,6 @@ export function mainSlider() {
   const link3 = document.querySelector('.tab-slide-3');
   const link4 = document.querySelector('.tab-slide-4');
   const link5 = document.querySelector('.tab-slide-5');
-
-  var swiper2 = new Swiper('.main__swiper-2', {
-    modules: [Pagination, Navigation, Autoplay],
-    loop: true,
-    slidesPerView: 'auto',
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    slideToClickedSlide: true,
-    speed: 1000,
-
-    navigation: {
-      nextEl: '.main__btn-next',
-      prevEl: '.main__btn-prev',
-    },
-    pagination: {
-      el: '.main__pagination-js',
-    },
-  });
-
   const link6 = document.querySelector('.tab-slide-6');
   const link7 = document.querySelector('.tab-slide-7');
   const link8 = document.querySelector('.tab-slide-8');
@@ -122,11 +123,17 @@ export function mainSlider() {
   if (tabsBtn) {
     tabsBtn.forEach(function (item) {
       item.addEventListener('click', function () {
+        console.log(item);
+        // swiper1.enable();
+        swiper2.enable();
+        swiper2.autoplay.start();
         let currentBtn = item;
         let tabId = currentBtn.getAttribute('data-tab');
         let currentTab = document.querySelector(tabId);
 
         if (!currentBtn.classList.contains('active')) {
+          swiper1.autoplay.stop();
+          swiper2.autoplay.start();
           tabsBtn.forEach(function (item) {
             item.classList.remove('active');
           });

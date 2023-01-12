@@ -4925,12 +4925,68 @@ h2 {
   color: #1e2329;
 }
 
+.ticker {
+  width: 65%;
+  height: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid #b72bf6;
+  border-bottom: 1px solid #b72bf6;
+}
+.ticker__::before, .ticker__::after {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 30px;
+  content: "";
+  z-index: 1;
+}
+.ticker__::before {
+  left: 0;
+  background: linear-gradient(to right, #ccc 10%, transparent 80%);
+}
+.ticker__::after {
+  right: 0;
+  background: linear-gradient(to left, #ccc 10%, transparent 80%);
+}
+.ticker__content {
+  width: 100%;
+  display: flex;
+  line-height: 30px;
+  animation: marquee 10s linear infinite forwards;
+}
+.ticker__content:hover {
+  animation-play-state: paused;
+}
+.ticker__list {
+  width: 33.33%;
+  display: flex;
+  justify-content: space-around;
+}
+.ticker__link {
+  font-size: 22px;
+  line-height: 30px;
+  color: #b72bf6;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.6%);
+  }
+}
 .tab__right {
   width: 30%;
 }
 .tab__intro {
   width: 100%;
   height: auto;
+}
+.tab__box {
+  display: flex;
 }
 .tab__nav {
   display: flex;
@@ -5016,8 +5072,19 @@ h2 {
   }
 }
 @media (max-width: 800px) {
+  .intro {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
   .tab__items.active {
     flex-direction: column;
+  }
+  .tab__box {
+    flex-direction: column;
+  }
+  .ticker {
+    width: 100%;
+    margin-bottom: 20px;
   }
   .tab__right {
     width: 100%;

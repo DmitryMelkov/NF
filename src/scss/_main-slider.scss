@@ -82,6 +82,62 @@
   color: #1e2329;
 }
 
+.ticker {
+  // margin: 100px auto;
+  width: 65%;
+  height: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid $colorPurple;
+  border-bottom: 1px solid $colorPurple;
+  &__::before,
+  &__::after {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 30px;
+    content: "";
+    z-index: 1;
+  }
+  &__::before {
+    left: 0;
+    background: linear-gradient(to right, #ccc 10%, transparent 80%);
+  }
+  &__::after {
+    right: 0;
+    background: linear-gradient(to left, #ccc 10%, transparent 80%);
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    line-height: 30px;
+    animation: marquee 10s linear infinite forwards;
+  }
+  &__content:hover {
+    animation-play-state: paused;
+  }
+  &__list {
+    width: 33.33%;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__link {
+    font-size: 22px;
+    line-height: 30px;
+    color: $colorPurple;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.6%);
+  }
+}
+
 .tab {
   &__right {
     width: 30%;
@@ -89,6 +145,9 @@
   &__intro {
     width: 100%;
     height: auto;
+  }
+  &__box {
+    display: flex;
   }
   &__nav {
     display: flex;
@@ -188,8 +247,19 @@
 }
 
 @media (max-width: 800px) {
+  .intro {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
   .tab__items.active {
     flex-direction: column;
+  }
+  .tab__box {
+    flex-direction: column;
+  }
+  .ticker {
+    width: 100%;
+    margin-bottom: 20px;
   }
   .tab__right {
     width: 100%;
