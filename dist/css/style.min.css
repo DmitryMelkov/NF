@@ -4896,11 +4896,13 @@ h2 {
   pointer-events: all;
 }
 
-.main__swiper .swiper-pagination {
+.main__swiper-1 .swiper-pagination,
+.main__swiper-2 .swiper-pagination {
   bottom: 90px;
 }
 
-.main__swiper .swiper-pagination-bullet {
+.main__swiper-1 .swiper-pagination-bullet,
+.main__swiper-2 .swiper-pagination-bullet {
   width: 26px;
   height: 4px;
   background-color: #a65cf0;
@@ -4923,15 +4925,19 @@ h2 {
   color: #1e2329;
 }
 
-.tab__intro {
+.tab__right {
   width: 30%;
+}
+.tab__intro {
+  width: 100%;
   height: auto;
 }
 .tab__nav {
   display: flex;
-  justify-content: space-between;
   border: 1px solid #b9b9b9;
   border-radius: 8px;
+  width: 30%;
+  margin-left: auto;
 }
 .tab__nav-btn {
   width: 50%;
@@ -4953,7 +4959,8 @@ h2 {
   display: none;
 }
 .tab__items.active {
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 .tab__item {
   display: flex;
@@ -5008,9 +5015,17 @@ h2 {
     display: none;
   }
 }
-@media (max-width: 600px) {
-  .intro {
+@media (max-width: 800px) {
+  .tab__items.active {
     flex-direction: column;
+  }
+  .tab__right {
+    width: 100%;
+  }
+  .tab__nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .main__intro {
     width: 100%;

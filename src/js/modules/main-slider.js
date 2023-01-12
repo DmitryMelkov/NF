@@ -1,7 +1,7 @@
 import Swiper, { Pagination, Navigation, Autoplay } from 'swiper';
 
 export function mainSlider() {
-  var swiper = new Swiper('.main__swiper', {
+  var swiper1 = new Swiper('.main__swiper-1', {
     modules: [Pagination, Navigation, Autoplay],
     loop: true,
     slidesPerView: 'auto',
@@ -17,7 +17,7 @@ export function mainSlider() {
       prevEl: '.main__btn-prev',
     },
     pagination: {
-      el: '.main__pagination',
+      el: '.main__pagination-js',
     },
   });
 
@@ -25,45 +25,97 @@ export function mainSlider() {
   const link2 = document.querySelector('.tab-slide-2');
   const link3 = document.querySelector('.tab-slide-3');
   const link4 = document.querySelector('.tab-slide-4');
+  const link5 = document.querySelector('.tab-slide-5');
 
-  if ((link1, link2)) {
+  var swiper2 = new Swiper('.main__swiper-2', {
+    modules: [Pagination, Navigation, Autoplay],
+    loop: true,
+    slidesPerView: 'auto',
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    slideToClickedSlide: true,
+    speed: 1000,
+
+    navigation: {
+      nextEl: '.main__btn-next',
+      prevEl: '.main__btn-prev',
+    },
+    pagination: {
+      el: '.main__pagination-js',
+    },
+  });
+
+  const link6 = document.querySelector('.tab-slide-6');
+  const link7 = document.querySelector('.tab-slide-7');
+  const link8 = document.querySelector('.tab-slide-8');
+  const link9 = document.querySelector('.tab-slide-9');
+  const link10 = document.querySelector('.tab-slide-10');
+
+  if ((link1, link2, link3, link4, link5, link6, link7, link8, link9, link10)) {
     link1.addEventListener('mouseover', function () {
-      swiper.slideTo(0, 800);
+      swiper1.slideTo(0, 800);
     });
     link2.addEventListener('mouseover', function () {
-      swiper.slideTo(1, 800);
+      swiper1.slideTo(1, 800);
     });
     link3.addEventListener('mouseover', function () {
-      swiper.slideTo(2, 800);
+      swiper1.slideTo(2, 800);
     });
     link4.addEventListener('mouseover', function () {
-      swiper.slideTo(3, 800);
+      swiper1.slideTo(3, 800);
+    });
+    link5.addEventListener('mouseover', function () {
+      swiper1.slideTo(4, 800);
+    });
+    link6.addEventListener('mouseover', function () {
+      swiper2.slideTo(0, 800);
+    });
+    link7.addEventListener('mouseover', function () {
+      swiper2.slideTo(1, 800);
+    });
+    link8.addEventListener('mouseover', function () {
+      swiper2.slideTo(2, 800);
+    });
+    link9.addEventListener('mouseover', function () {
+      swiper2.slideTo(3, 800);
+    });
+    link10.addEventListener('mouseover', function () {
+      swiper2.slideTo(4, 800);
     });
   }
 
-  const sliderBtnHeight = () => {
-    const sliderContent = document.querySelector('.main__swiper-slide');
+  const sliderContent1 = document.querySelector('.main__swiper-slide');
 
-    const imgContent = document.querySelector('.main__swiper-img-content');
-    const sliderBtns = document.querySelector('.main__btns');
+  const imgContent1 = document.querySelector('.main__swiper-img-content');
+  const sliderBtns1 = document.querySelectorAll('.main__btns-js');
 
-    const textContent = document.querySelector('.main__swiper-content');
-    const sliderPagination = document.querySelector('.main__pagination');
+  const textContent1 = document.querySelector('.main__swiper-content');
+  const sliderPagination1 = document.querySelectorAll('.main__pagination-js');
 
-    if ((sliderContent, imgContent, sliderBtns, textContent, sliderPagination)) {
+  const sliderBtnHeight = (sliderContent, imgContent, sliderBtns, textContent, sliderPagination) => {
+    if ((sliderContent, imgContent, textContent)) {
       let slideEmpty = sliderContent.offsetHeight - (imgContent.offsetHeight + textContent.offsetHeight);
 
       let imgHeight = Math.floor(imgContent.offsetHeight / 2) + 'px';
-      let textHeight = Math.floor(textContent.offsetHeight + slideEmpty + 20) + 'px';
+      let textHeight = Math.floor(textContent.offsetHeight + slideEmpty + 30) + 'px';
 
-      sliderBtns.style.top = imgHeight;
-      sliderPagination.style.bottom = textHeight;
+      sliderBtns.forEach((item) => {
+        item.style.top = imgHeight;
+      });
+
+      sliderPagination.forEach((item) => {
+        item.style.bottom = textHeight;
+      });
     }
   };
 
-  sliderBtnHeight();
-
-  window.addEventListener('resize', sliderBtnHeight);
+  sliderBtnHeight(sliderContent1, imgContent1, sliderBtns1, textContent1, sliderPagination1);
+  window.addEventListener(
+    'resize',
+    sliderBtnHeight(sliderContent1, imgContent1, sliderBtns1, textContent1, sliderPagination1)
+  );
 
   const tabsBtn = document.querySelectorAll('.tab__nav-btn');
   const tabsItems = document.querySelectorAll('.tab__items');
