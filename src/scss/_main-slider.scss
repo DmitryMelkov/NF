@@ -83,49 +83,24 @@
 }
 
 .ticker {
-  // margin: 100px auto;
-  width: 65%;
-  height: auto;
-  white-space: nowrap;
-  overflow: hidden;
-  position: relative;
   border-top: 1px solid $colorPurple;
   border-bottom: 1px solid $colorPurple;
-  &__::before,
-  &__::after {
-    position: absolute;
-    top: 0;
-    width: 50px;
-    height: 30px;
-    content: "";
-    z-index: 1;
-  }
-  &__::before {
-    left: 0;
-    background: linear-gradient(to right, #ccc 10%, transparent 80%);
-  }
-  &__::after {
-    right: 0;
-    background: linear-gradient(to left, #ccc 10%, transparent 80%);
-  }
-  &__content {
-    width: 100%;
+  width: 65%;
+  overflow: hidden;
+
+  &__box {
     display: flex;
-    line-height: 30px;
-    animation: marquee 10s linear infinite forwards;
+    width: 65%;
+    animation: marquee 5s linear infinite;
   }
-  &__content:hover {
+  &__box:hover {
     animation-play-state: paused;
+    cursor: pointer;
   }
-  &__list {
-    width: 33.33%;
-    display: flex;
-    justify-content: space-around;
-  }
-  &__link {
-    font-size: 22px;
-    line-height: 30px;
-    color: $colorPurple;
+  &__descr {
+    white-space: nowrap;
+    margin-right: 30px;
+    width: 100%;
   }
 }
 
@@ -134,7 +109,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-66.6%);
+    transform: translateX(-100%);
   }
 }
 
