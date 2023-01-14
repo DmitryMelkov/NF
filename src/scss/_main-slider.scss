@@ -21,6 +21,24 @@
   height: 60px;
 }
 
+.main__btn-prev {
+  margin-left: 20px;
+}
+
+.main__btn-next {
+  margin-right: 20px;
+}
+
+.main__btn-span {
+  font-size: 180px;
+  line-height: 180px;
+  font-weight: 500;
+  font-family: "IBMPlexSans", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 10px;
+  transition: color .3s ease-in-out;
+}
+
 .main__swiper-img {
   width: 100%;
   border-radius: 8px;
@@ -172,6 +190,9 @@
   &__img {
     max-width: 140px;
   }
+  &__img img {
+    border-radius: 8px;
+  }
   &__img-span {
     font-size: 25px;
     line-height: 30px;
@@ -186,6 +207,9 @@
       background-color: #ededed;
       border-radius: 8px;
     }
+  }
+  .main__btn-span:hover {
+    color: rgba(255, 255, 255, 1);
   }
 }
 
@@ -222,6 +246,15 @@
 }
 
 @media (max-width: 800px) {
+  .tab {
+    &__nav-btn {
+      padding: 2px;
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
   .intro {
     padding-top: 15px;
     padding-bottom: 15px;
