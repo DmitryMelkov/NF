@@ -12,7 +12,7 @@ import { aboutSwiper } from './modules/aboutSwiper.js';
 import { partnershipsSwiper } from './modules/partnershipsSwiper.js';
 import { nameCollections } from './modules/name-collections.js';
 import { copy } from './modules/copy.js';
-import { mainSlider } from './modules/main-slider.js';
+
 
 flsFunctions.isWeb();
 ourPartnersSwiper();
@@ -28,4 +28,4 @@ nameCollections();
 aboutSwiper();
 copy();
 partnershipsSwiper();
-mainSlider();
+
